@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     bool gameHasEnded = false;
     public float restartDelay = 1f;
+    public GameObject winPanel;
 
     public void EndGame()
     {
@@ -18,5 +19,12 @@ public class GameManager : MonoBehaviour
     void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void LevelWon()
+    {
+        Debug.Log("LEVEL WON!");
+        winPanel.SetActive(true);
+        gameHasEnded = true;
     }
 }
