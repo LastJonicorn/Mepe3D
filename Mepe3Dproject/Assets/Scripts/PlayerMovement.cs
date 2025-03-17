@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float sidewaysForce = 500f;
 
     // Update is called once per frame
+
     void FixedUpdate()
     {
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
